@@ -19,6 +19,7 @@ mkdir -p "$SUBJECT/$ASSIGNMENT"/{src,results}
 # Create files
 touch "$SUBJECT/README.md"
 touch "$SUBJECT/$ASSIGNMENT/memo.txt"
+touch "$SUBJECT/$ASSIGNMENT/requirements.txt"
 ```
 
 ### Directory Structure
@@ -30,6 +31,7 @@ university-assignments/
     ├── README.md
     └── ASSIGNMENT/
         ├── memo.txt
+        ├── requirements.txt
         ├── src/
         └── results/
 ```
@@ -41,4 +43,25 @@ university-assignments/
 - `src/`：ソースコード
 - `results/`：実行結果・出力ファイル
 - `memo.txt`：実装時のメモ・考察
-- `README.md`：科目ごとの課題管理・説明
+- `requirements.txt`：Pythonの外部ライブラリとバージョン
+- `README.md`：リポジトリ全体または科目ごとの説明
+
+## Python Environment
+
+### Install Dependencies
+
+課題ディレクトリに移動して，必要なライブラリをインストールする．
+
+```bash
+pip install -r requirements.txt
+```
+
+### Add Dependencies
+
+新しい外部ライブラリを使用する場合は，`requirements.txt` にライブラリ名とバージョンを記載する．
+
+```text
+numpy==2.2.0
+```
+
+※ Python標準ライブラリのみを使用する場合，`requirements.txt` は空でよい．
