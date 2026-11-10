@@ -1,5 +1,6 @@
 # university-assignments
-大学の講義・演習で作成したプログラム
+
+大学の講義・演習で作成したプログラムを管理するリポジトリ．
 
 ## Directory Creation
 
@@ -17,20 +18,20 @@ mkdir -p "$SUBJECT/$ASSIGNMENT"/{src,results}
 
 # Create files
 touch "$SUBJECT/README.md"
-touch "$SUBJECT/$ASSIGNMENT/README.md"
-touch "$SUBJECT/$ASSIGNMENT/memo.md"
+touch "$SUBJECT/$ASSIGNMENT/memo.txt"
 ```
 
 ### Directory Structure
 
 ```text
-SUBJECT/
+university-assignments/
 ├── README.md
-└── ASSIGNMENT/
+└── SUBJECT/
     ├── README.md
-    ├── memo.md
-    ├── src/
-    └── results/
+    └── ASSIGNMENT/
+        ├── memo.txt
+        ├── src/
+        └── results/
 ```
 
 ### Naming Rules
@@ -39,4 +40,5 @@ SUBJECT/
 - `ASSIGNMENT`：課題名（英語表記）
 - `src/`：ソースコード
 - `results/`：実行結果・出力ファイル
-- `memo.md`：実装時のメモ・考察
+- `memo.txt`：実装時のメモ・考察
+- `README.md`：科目ごとの課題管理・説明
